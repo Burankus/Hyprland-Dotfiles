@@ -1,0 +1,14 @@
+show=drun
+term=kitty
+location=center
+width=700
+prompt=Search | 検索
+show_all=true
+gtk_dark=false
+insensitive=false
+allow_markup=true
+; allow_images=true
+line_wrap=word
+lines=10
+no_actions=true
+hide_scroll=true

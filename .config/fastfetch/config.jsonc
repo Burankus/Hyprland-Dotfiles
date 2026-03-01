@@ -1,0 +1,118 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+	"logo": {
+		"source": "~/.config/fastfetch/renako1.txt",
+		"padding": {
+            "top": 0,
+            "left": 2,
+            "right": 7
+        },
+		"color": {
+			"1": "#a57eee"
+		}
+	},
+	"display": {
+		"separator": " ",
+		"color": {
+			"keys": "#946ae0",
+			"title": "#e3c8ae"
+		},
+		"bar": {
+			"width": 20
+		},
+		"percent": {
+            "type": ["num", "bar"]
+        }
+	},
+	"modules": [
+		{
+			"type": "os",
+			"key": " ",
+            "format": "\u001b[38;2;190;190;190m──────────\u001b[0m \u001b[38;2;164;120;214m{name}\u001b[0m \u001b[38;2;190;190;190m──────────\u001b[0m",
+        },
+		{
+			"type": "title",
+			"key": "User  ",
+			"format": "{user-name}@{host-name}"
+		},
+		{
+			"type": "wm",
+			"key": "WM    "
+		},
+		{
+			"type": "packages",
+			"key": "Pkgs  "
+		},
+		{
+			"type": "shell",
+			"key": "Shell "
+		},
+		// {
+		// 	"type": "terminal",
+		// 	"key": "Terminal"
+		// },
+		{
+			"type": "kernel",
+			"key": "Kernel"
+		},
+
+		{
+			"type": "uptime",
+			"key": "Uptime"
+		},
+		{
+            "type": "custom",
+            "format": "\u001b[38;2;190;190;190m────────────\u001b[0m \u001b[38;2;164;120;214mSystem\u001b[0m \u001b[38;2;190;190;190m────────────\u001b[0m",
+        },
+		{
+			"type": "cpu",
+			"key": "CPU "
+		},
+		{
+			"type": "gpu",
+			"key": "GPU "
+		},
+		{
+			"type": "memory",
+			"key": "Rams",
+			"percent": {
+        		"green": 20,
+        		"yellow": 40,
+				"red": 75
+			}
+		},
+		{
+			"type": "swap",
+			"key": "Swap",
+			"percent": {
+        		"green": 20,
+        		"yellow": 40,
+				"red": 75
+			}
+		},
+		{
+			"type": "disk",
+			"key": "Root",
+			"folders": ["/"],
+			"percent": {
+        		"green": 20,
+        		"yellow": 40,
+				"red": 75
+			}
+		},
+		{
+			"type": "disk",
+			"key": "Home",
+			"folders": ["/home"],
+			"percent": {
+        		"green": 20,
+        		"yellow": 40,
+				"red": 75
+			}
+		},
+		{
+			"type": "colors",
+			"symbol": "circle"
+		},
+	]
+}

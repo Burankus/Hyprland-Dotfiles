@@ -1,0 +1,148 @@
+* {
+    font-family: Maple Mono NF CN;
+    /* font-family: VictorMono Nerd Font Propo; */
+    padding: 0px;
+    background: transparent;
+}
+
+window#waybar {
+    background-color: rgba(28, 28, 28, 0.9);
+    border-radius: 30px;
+    border-style: none;
+}
+    
+.modules-left {
+    margin-left: 8px;
+}
+
+/* .modules-center {
+    background-color: rgba(28, 28, 28, 0.9);
+    padding: 0px 20px;
+    border-radius: 30px;
+} */
+
+/* Right modules */
+/* #system {
+    background-color: rgba(28, 28, 28, 0.9);
+    border-radius: 30px;
+}
+
+#apps {
+    background-color: rgba(28, 28, 28, 0.9);
+    border-radius: 30px;
+    padding-right: 5px;
+    margin-right: 15px;
+} */
+
+#clock calendar {
+    background-color: rgba(28, 28, 28, 0.85);
+}
+
+tooltip {
+    background-color: rgba(28, 28, 28, 0.8);
+}
+
+#battery,
+#network,
+#tray,
+#memory,
+#wireplumber,
+#media {
+    /* background-image: linear-gradient(to bottom, #1c1c1c 100%); */
+  
+    margin: 6px;
+    margin-right: 0px;
+    padding: 4px 0px;
+    border-radius: 8px;
+    color: #d8cab8;
+
+    border-style: none;
+    transition-duration: 120ms;
+}
+
+#network {
+    padding-right: 8px;
+    margin-right: 10px;
+}
+
+#tray menu {
+    background-color: rgba(28, 28, 28, 0.85);
+    color: #d8cab8;
+    padding: 4px;
+}
+
+#tray menu menuitem {
+    margin: 3px;
+    color: #d8cab8;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #27232b;
+}
+
+#tray menu menuitem:hover {
+    color: #c19cd6;
+    font-weight: bold;
+}
+
+#workspaces {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+    margin-right: 0px;
+    padding: 2px 4px;
+    /* border-radius: 8px; */
+    color: #d8cab8;
+
+    border-style: none;
+    transition-duration: 120ms;
+}
+
+#workspaces button {
+    all: initial;
+    transition-duration: 100ms;
+    min-width: 0;
+    font-weight: bold;
+    color: #d8cab8;
+    /* margin-right: 4px;
+    margin-left: 4px; */
+    padding-left: 18px;
+    padding-right: 18px;
+    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1)
+}
+
+#workspaces button:hover {
+    transition-duration: 120ms;
+    color: #ac82e9;
+}
+#workspaces button.focused {
+    font-weight: bold;
+}
+#workspaces button.active {
+    background-color: #ac82e9;
+    color: #27232b;
+    padding: 2px 26px;
+    border-radius: 24px;
+}
+
+#workspaces button.urgent {
+    /* padding: 2px 12px;
+    border-radius: 14px; */
+    animation: urgent-flash 2s infinite alternate;
+}
+
+@keyframes urgent-flash {
+    0% {
+        color: #d8cab8;
+    }
+    50% {
+        color: rgba(200, 200, 200, 0.35);
+    }
+    100% {
+        color: #d8cab8;
+    }
+}
+
+/* #media {
+    padding-left: 100px;
+    padding-right: 20px;
+} */

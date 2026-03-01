@@ -1,0 +1,121 @@
+{
+    "layer": "bottom",
+    "position": "top",
+
+    "margin-bottom": 10,
+    "margin-top": 5,
+    "margin-right": 15,
+    "margin-left": 15,
+    "spacing": 10,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/media"
+    ],
+    "modules-center": [
+        "clock"
+    ], 
+    "modules-right": [
+        // "group/apps",
+        // "group/system"
+        "tray",
+        "wireplumber",
+        "network"
+    ],
+
+    "group/apps": {
+        "orientation": "horizontal",
+        "modules": ["tray"]
+    },
+
+    "group/system": {
+        "orientation": "horizontal",
+        "modules": [
+            // "memory",
+            "wireplumber",
+            "network"
+        ]
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X"
+        }
+        ,
+        "disable-scroll": true,
+        "all-outputs": false,
+        "tooltip": false,
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "clock": {
+        "locale": "ja_JP.UTF-8",
+        "format": "{:L%Y.%m.%d (%a) %H:%M}     ",
+        "format-alt": "{:%H:%M}",
+        "tooltip": false
+        // "tooltip-format": "<tt>{calendar}</tt>",
+        // "calendar": {
+        //     "mode": "month",
+        //     "weeks-pos": "right",
+        //     "on-scroll": 1,
+        //     "format": {
+        //         "months":     "<span color='#d8cab8'><b>{}</b></span>",
+        //         "days":       "<span color='#d8cab8'><b>{}</b></span>",
+        //         "weeks":      "",
+        //         "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+        //         "today":      "<span color='#c19cd6'><b><u>{}</u></b></span>"
+        //         }
+        // },
+        // "actions": {
+        //     "on-scroll-up": "shift_down",
+        //     "on-scroll-down": "shift_up"
+        // }
+    },
+
+    "network": {
+        "format": "  {essid}",
+        "format-disconnected": "󰤮 No Network",
+        "tooltip": false,
+	"on-click": "kitty -e nmtui"
+    },
+
+    "wireplumber": {
+        "format" : "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "scroll-step": 1,
+        "max-volume": 100,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-middle": "/home/buran/.config/waybar/scripts/cycle-audio.sh",
+        "on-click-right": "pavucontrol",
+        "format-icons": [
+            "",
+            "",
+            " "
+        ],
+        "format-muted": "  0%"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5
+    },
+
+    "custom/media": {
+        "exec": "playerctl metadata --format '|  {{ artist }} - {{ title }}' 2>/dev/null || echo ''",
+        "interval": 2,
+        "max-length": 40,
+        "on-click": "playerctl play-pause"
+    }
+}
