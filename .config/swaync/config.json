@@ -1,0 +1,114 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "cssPriority": "user",
+  "ignore-gtk-theme": true,
+
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "layer-shell-cover-screen": true,
+
+  "control-center-margin-top": 0,
+  "control-center-margin-bottom": 0,
+  "control-center-margin-right": 0,
+  "control-center-margin-left": 0,
+  "control-center-width": 450,
+  "control-center-height": 600,
+
+  "notification-2fa-action": true,
+  "notification-inline-replies": false,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  
+  "timeout": 4,
+  "timeout-low": 2,
+  "timeout-critical": 6,
+  "relative-timestamps": true,
+  
+  "image-visibility": "when-available",
+  "notification-window-width": 400,
+  "fit-to-screen": true,
+
+  "keyboard-shortcuts": true,
+  "notification-grouping": true,
+  
+  "transition-time": 200,
+
+  "hide-on-clear": false,
+  "hide-on-action": true,
+
+  "text-empty": "No notifications... (-ω-、)",
+  "script-fail-notify": true,
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "Normal",
+      "app-name": "example.app.id"
+    }
+  },
+
+  "widgets": [
+    "inhibitors",
+    "title",
+    "buttons-grid",
+    "dnd",
+    "notifications",
+    "mpris"
+  ],
+
+  "widget-config": {
+    "notifications": {
+      "vexpand": true
+    },
+    "inhibitors": {
+      "text": "Inhibitors",
+      "button-text": "Clear",
+      "clear-all-button": true
+    },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear"
+    },
+    "dnd": {
+      "text": "󰂠 Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 5,
+      "text": "Label Text"
+    },
+    "mpris": {
+      "blacklist": [],
+      "autohide": true,
+      "show-album-art": "always",
+      "loop-carousel": false
+    },
+    "buttons-grid": {
+      "buttons-per-row": 5,
+      "actions": [
+        {
+          "label": "",
+          "command": "sh -c 'notify-send HYPRLOCKKKK'"
+        },
+        {
+          "label": "",
+          "command": "kitty -e bluetoothctl"
+        },
+        {
+          "label": "",
+          "command": "systemctl hibernate"
+        },
+        {
+          "label": "",
+          "command": "systemctl reboot"
+        },
+        {
+          "label": "",
+          "command": "systemctl shutdown"
+        }
+      ]
+    }
+  }
+}
